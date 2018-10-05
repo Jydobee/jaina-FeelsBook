@@ -9,17 +9,10 @@ To use the application
 4) click on show count to show the count of emotions
 5) Click on an emotion to edit the emotion
 
-UML Diagram
 
+Explanation of my UML Diagram
 
-
-
-
-
-
-
-
-
+The emotions class have have the attribues of the emotions name itself, the date and time is was recorded and also an optional comment. The method SaveinFile and loadfromfile help to store the information inside a file so that we don't lose our data after closing the application. There is a relationship between emotions and the emotion list, because emotion list has to update the feeling, the feeling count and also change the date and time in which the emotion was recoreded. 
 
 
 
