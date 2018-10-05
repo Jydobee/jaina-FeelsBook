@@ -78,17 +78,11 @@ public class MainActivity extends AppCompatActivity {
         emotionViewList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Log.d("TEST", "I shouldn't be here");
-                // find out how to edit here
-                /*EditText input = (EditText) findViewById(R.id.edit_emotion);
-                EditText input2 = (EditText) findViewById(R.id.edit_date);
-                EditText input3 = (EditText) findViewById(R.id.edit_comment);*/
+              
                 Intent intent = new Intent(getApplicationContext(), EmotionsEditActivity.class);
 
-                // emotion_edit = getIntent().getExtras().getString("emotionedit");
-
-                //intent.putExtra("comment", comment);
                 startActivity(intent);
+                emotionViewList.setAdapter(adapter);
             }
         });
 
