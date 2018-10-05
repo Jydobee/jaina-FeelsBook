@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">jaina-FeelsBook</string>
+    <string name="love">Love</string>
+    <string name="joy">Joy</string>
+    <string name="surprise">Surprise</string>
+    <string name="anger">Anger</string>
+    <string name="fear">Fear</string>
+    <string name="sadness">Sadness</string>
+    <string name="comment_optional">Comment (Optional)</string>
+
+
+</resources>
