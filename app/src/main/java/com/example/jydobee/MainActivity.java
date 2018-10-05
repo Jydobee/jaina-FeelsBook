@@ -38,8 +38,7 @@ import java.util.Map;
 // Implementation of the main activity
 public class MainActivity extends AppCompatActivity {
     String comment;
-    private static final String FILENAME = "file.sav";
-    //private static final String FILENAME2 = "file0999.sav2";
+    private static final String FILENAME = "file100000.sav";
     private EditText et;
     EditText comment_input;
     EditText emotionedit;
