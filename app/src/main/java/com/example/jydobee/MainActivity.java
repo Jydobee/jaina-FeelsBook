@@ -38,8 +38,7 @@ import java.util.Map;
 // Implementation of the main activity
 public class MainActivity extends AppCompatActivity {
     String comment;
-    private static final String FILENAME = "file.sav";
-    //private static final String FILENAME2 = "file0999.sav2";
+    private static final String FILENAME = "file100000.sav";
     private EditText et;
     EditText comment_input;
     EditText emotionedit;
@@ -79,17 +78,11 @@ public class MainActivity extends AppCompatActivity {
         emotionViewList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Log.d("TEST", "I shouldn't be here");
-                // find out how to edit here
-                /*EditText input = (EditText) findViewById(R.id.edit_emotion);
-                EditText input2 = (EditText) findViewById(R.id.edit_date);
-                EditText input3 = (EditText) findViewById(R.id.edit_comment);*/
+              
                 Intent intent = new Intent(getApplicationContext(), EmotionsEditActivity.class);
 
-                // emotion_edit = getIntent().getExtras().getString("emotionedit");
-
-                //intent.putExtra("comment", comment);
                 startActivity(intent);
+                emotionViewList.setAdapter(adapter);
             }
         });
 
@@ -306,86 +299,6 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-    /*private void saveCountInFile(ArrayList<String> comment) {
-        Map<String, Integer> hm = new HashMap<String, Integer>();
-        ArrayList<String> countString = new ArrayList<String>();
 
-        try {
-            FileOutputStream fos2 = openFileOutput(FILENAME2,
-                    Context.MODE_APPEND);
-            //fos.write(new String(comment + "")
-            //      .getBytes());
-
-            for (String s : onEmotionArray) {
-                //fos2.write(s.getBytes());
-                Integer j = hm.get(s);
-                hm.put(s, (j == null) ? 1 : j + 1);
-            }
-
-            // displaying the occurrence of elements in the arraylist
-            for (Map.Entry<String, Integer> val : hm.entrySet()) {
-                countString.add( val.getKey()  + val.getValue()+ "\n ");
-
-                for (String t : countString) {
-                    fos2.write(t.getBytes());
-
-                }
-
-                //System.out.println("Element " + val.getKey() + " "
-                       // + "occurs"
-                       // + ": " + val.getValue() + " times");
-            }
-
-            fos2.close();
-        }
-        catch (FileNotFoundException e1) {
-            e1.printStackTrace();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-/
-        }*/
-
-
-   /* private String[] loadCountFromFile() {
-        //E4TdeleteFile(FILENAME)
-        ArrayList<String> storage = new ArrayList<String>();
-        try {
-            FileInputStream fis = openFileInput(FILENAME2);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            String line = in.readLine();
-            while (line != null) {
-                storage.add(line);
-                line = in.readLine();
-            }
-
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return storage.toArray(new String[storage.size()]);*/
-
-
-
-
-
-    /*private void deleteFile (View Object view;
-        view) {
-        File file = new File(getFilesDir(), FILENAME);
-        if (file.exists()) {
-            deleteFile(FILENAME);
-        }
-    }
-
-
-
-
-
-
-
-
-}*/
 
 
